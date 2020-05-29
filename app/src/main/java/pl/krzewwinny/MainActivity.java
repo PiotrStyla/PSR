@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        webView = (WebView) findViewById(R.id.webView);
+        webView = findViewById(R.id.webView);
         webView.setWebViewClient(new myWebClient());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("https://www.krzewwinny.pl/nowenna-przed-zeslaniem-ducha-swietego/");
@@ -39,12 +39,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    // This method is used to detect back button
     public void onBackPressed() {
         if(webView.canGoBack()) {
             webView.goBack();
         } else {
-            // Let the system handle the back button
             super.onBackPressed();
         }
     }
