@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Krzew Winny</string>
+    <string name="action_favorite">Zadzwoń do nas</string>
+    <string name="tel_number">+48784345625</string>
+
 </resources>
